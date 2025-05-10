@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  grpc-server:
+    build:
+      context: .
+    networks:
+      - grpc_network
+    container_name: grpc-server
+    ports:
+      - "${GRPC_PORT}:${GRPC_PORT}"
+    restart: unless-stopped
+    env_file:
+     - .env
+
+
+networks:
+  grpc_network:
+    driver: bridge
