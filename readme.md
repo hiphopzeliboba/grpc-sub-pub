@@ -56,7 +56,7 @@ git clone https://github.com/yourname/sub-pub.git
 cd sub-pub
 ```
 2. Соберите и запустите через Docker-Compose
-```docker-compose up --build```
+```docker-compose up --build -d```
 3. Локальный запуск (без Docker)
 ```go run internal/cmd/grpc_server/main.go```
 
